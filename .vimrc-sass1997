@@ -1,0 +1,39 @@
+set clipboard=unnamed
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+set autoindent
+set cindent
+set shiftwidth=4
+set smartindent
+set smarttab
+set softtabstop=4
+
+set ruler
+
+set undolevels=1000
+set backspace=indent,eol,start
+syntax on
+set number
+set numberwidth=2
+set cpoptions+=n
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+set autoread
+set nocompatible
+
+
+" NERDTree Configs
+let NERDTreeShowHidden=1
+autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+let g:airline#extensions#branch#format = 'Git_flow_branch_format'
+
