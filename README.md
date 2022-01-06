@@ -8,6 +8,8 @@ Make sure you delete first your .vim folder in your home directory
 git clone git@github.com:sass1997/.vim.git $HOME/.vim
 
 git submodule init
+
+git submodule update
 ```
 
 ## Make use of my .vimrc file
